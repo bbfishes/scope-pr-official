@@ -287,21 +287,21 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">聯繫我們</h2>
                 <p class="text-gray-600">Let's Scope Out Your Future.</p>
             </div>
-            <form class="grid grid-cols-1 gap-6">
+            <form action="https://formspree.io/f/xvzbvqob" method="POST" class="grid grid-cols-1 gap-6">
                 <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="您的姓名" class="bg-gray-50 border border-gray-100 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-navy transition">
-                    <input type="email" placeholder="您的電子郵件" class="bg-gray-50 border border-gray-100 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-navy transition">
+                    <input type="text" name="姓名" required placeholder="您的姓名" class="bg-gray-50 border border-gray-100 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-navy transition">
+                    <input type="email" name="Email" required placeholder="您的電子郵件" class="bg-gray-50 border border-gray-100 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-navy transition">
                 </div>
-                <select class="bg-gray-50 border border-gray-100 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-navy transition">
-                    <option>感興趣的服務類型</option>
-                    <option>科技行銷</option>
-                    <option>品牌溝通</option>
-                    <option>數位與社群</option>
-                    <option>B2B 與政府標案</option>
-                    <option>ESG 與地方創生</option>
-                    <option>危機管理</option>
+                <select name="服務項目" class="bg-gray-50 border border-gray-100 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-navy transition">
+                    <option value="">感興趣的服務類型</option>
+                    <option value="科技行銷">科技行銷</option>
+                    <option value="品牌溝通">品牌溝通</option>
+                    <option value="數位與社群">數位與社群</option>
+                    <option value="B2B與政府標案">B2B 與政府標案</option>
+                    <option value="ESG與地方創生">ESG 與地方創生</option>
+                    <option value="危機管理">危機管理</option>
                 </select>
-                <textarea rows="4" placeholder="請描述您的需求或合作構想" class="bg-gray-50 border border-gray-100 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-navy transition"></textarea>
+                <textarea name="諮詢內容" rows="4" required placeholder="請描述您的需求或合作構想" class="bg-gray-50 border border-gray-100 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-navy transition"></textarea>
                 <button type="submit" class="bg-navy text-white py-4 rounded-xl text-lg font-bold hover:bg-blue-900 transition shadow-xl">送出諮詢訊息</button>
             </form>
         </div>
