@@ -6,79 +6,458 @@
     <title>TOPS 台北好購 | 思構益公關案例</title>
     <meta name="description" content="全台首創 B2B 採購媒合平台 TOPS 台北好購，由 Scope PR 協助營運與行銷。半年內創造 3.48 億實質採購產值，成功建構新創與大企業間的合作生態系。">
     <meta name="keywords" content="TOPS台北好購,B2B媒合,台北市政府產業局,採購獎勵機制,新創生態系,Scope PR案例">
+    <meta property="og:title" content="TOPS 台北好購 — 思構益公關 Scope PR">
+    <meta property="og:description" content="全台首創 B2B 採購媒合平台 TOPS 台北好購，由 Scope PR 協助營運與行銷。半年內創造 3.48 億實質採購產值，成功建構新創與大企業間的合作生態系。">
+    <meta property="og:type" content="article">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: '#003366',
-                        vibrantOrange: '#FF6600',
+                        ink: '#0A0A0A',
+                        ink2: '#1F1F1F',
+                        muted: '#5A5A5A',
+                        muted2: '#8A8A8A',
+                        cream: '#FAFAF7',
+                        cream2: '#F2EFE8',
+                        line: '#E8E5DD',
+                        terracotta: '#C5552D',
+                        terracotta2: '#A8431F',
+                        midnight: '#0F1419',
                     },
                     fontFamily: {
-                        sans: ['Noto Sans TC', 'sans-serif'],
-                    }
+                        sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
+                        serif: ['Noto Serif TC', 'serif'],
+                        mono: ['Inter', 'sans-serif'],
+                    },
                 }
             }
         }
     </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: #FAFAF7;
+            color: #0A0A0A;
+            font-feature-settings: "palt";
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-serif-tc { font-family: 'Noto Serif TC', serif; }
+        .font-mono-en { font-family: 'Inter', sans-serif; font-feature-settings: "ss01", "cv11"; }
+        .kicker {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #5A5A5A;
+        }
+        .kicker-num {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: #C5552D;
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -4px;
+            width: 0; height: 1px;
+            background-color: #0A0A0A;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .display-number {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-feature-settings: "tnum";
+            letter-spacing: -0.04em;
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+        }
+        .mobile-menu.open { transform: translateX(0); }
+        body.menu-open { overflow: hidden; }
+        ::selection { background: #C5552D; color: #FAFAF7; }
+        .prose-rich p { line-height: 1.95; color: #5A5A5A; }
+    </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center">
-                <img src="images/logo.jpg" alt="Scope PR Logo" class="h-10 w-auto mr-3 mix-blend-multiply">
-                <span class="text-xl font-bold text-navy">思構益公關顧問有限公司</span>
-            </a>
-            <a href="index.html#portfolio" class="text-navy font-bold hover:text-vibrantOrange transition">← 返回案例列表</a>
+<body class="font-sans bg-cream text-ink">
+
+    <!-- TOP BAR -->
+    <div class="hidden md:block bg-ink text-cream/70 text-xs">
+        <div class="max-w-[1400px] mx-auto px-8 py-2 flex justify-between items-center font-mono-en">
+            <span>EST. 2025 · TAIPEI</span>
+            <div class="flex items-center gap-6">
+                <a href="mailto:contact@scopepr.com.tw" class="hover:text-cream transition">contact@scopepr.com.tw</a>
+                <span class="opacity-40">|</span>
+                <a href="index.html#contact" class="hover:text-cream transition">預約策略諮詢 →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="sticky top-0 w-full bg-cream/85 backdrop-blur-md z-40 border-b border-line">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/logo.jpg" alt="Scope PR" class="h-10 w-10 rounded object-cover">
+                    <div class="leading-tight">
+                        <div class="font-serif-tc font-bold text-ink text-lg md:text-xl tracking-tight">思構益公關</div>
+                        <div class="font-mono-en text-[10px] text-muted2 tracking-[0.15em] uppercase">Scope PR Consulting</div>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-10">
+                    <a href="index.html#about" class="nav-link text-sm font-medium text-ink2">關於我們</a>
+                    <a href="index.html#services" class="nav-link text-sm font-medium text-ink2">專業服務</a>
+                    <a href="index.html#process" class="nav-link text-sm font-medium text-ink2">服務流程</a>
+                    <a href="index.html#portfolio" class="nav-link text-sm font-medium text-ink2">標竿實績</a>
+                    <a href="index.html#faq" class="nav-link text-sm font-medium text-ink2">常見問題</a>
+                    <a href="index.html#contact" class="bg-ink text-cream px-6 py-3 text-sm font-medium hover:bg-terracotta transition-colors">
+                        預約策略諮詢
+                    </a>
+                </div>
+                <button id="menuBtn" aria-label="menu" class="lg:hidden flex flex-col gap-1.5 p-2 -mr-2">
+                    <span class="block w-6 h-px bg-ink"></span>
+                    <span class="block w-6 h-px bg-ink"></span>
+                    <span class="block w-4 h-px bg-ink ml-auto"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <main class="py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <span class="bg-vibrantOrange text-white text-sm font-bold px-4 py-1 rounded-full mb-4 inline-block">B2B 生態系</span>
-                <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6">TOPS 台北好購 —— 全台首創 B2B 採購媒合平台與獎勵機制</h1>
-                <p class="text-gray-500 text-lg">標籤：#B2B生態系 #政策行銷 #ESG永續採購 #新創三箭 #數位媒合</p>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-cream lg:hidden flex flex-col">
+        <div class="flex justify-between items-center h-20 px-6 border-b border-line">
+            <span class="font-serif-tc font-bold text-lg">思構益公關</span>
+            <button id="closeMenuBtn" aria-label="close" class="p-2 -mr-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <nav class="flex-1 flex flex-col px-6 py-10 gap-1 overflow-y-auto">
+            <a href="index.html#about" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">01</span><span class="font-serif-tc text-2xl">關於我們</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#services" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">02</span><span class="font-serif-tc text-2xl">專業服務</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#process" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">03</span><span class="font-serif-tc text-2xl">服務流程</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#portfolio" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">04</span><span class="font-serif-tc text-2xl">標竿實績</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#faq" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">05</span><span class="font-serif-tc text-2xl">常見問題</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#contact" class="mt-8 bg-ink text-cream py-5 text-center font-serif-tc text-xl">預約策略諮詢 →</a>
+        </nav>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="max-w-[1400px] mx-auto px-6 md:px-8 pt-8 md:pt-12">
+        <div class="flex items-center gap-3 font-mono-en text-xs">
+            <a href="index.html" class="text-muted2 hover:text-ink transition">HOME</a>
+            <span class="text-muted2">/</span>
+            <a href="index.html#portfolio" class="text-muted2 hover:text-ink transition">CASE STUDIES</a>
+            <span class="text-muted2">/</span>
+            <span class="text-ink">03</span>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="pt-12 md:pt-20 pb-16 md:pb-24">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="grid md:grid-cols-12 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="display-number text-5xl md:text-6xl text-terracotta">03</div>
+                </div>
+                <div class="md:col-span-8 reveal">
+                    <div class="kicker mb-6">— Case Study · B2B & Government</div>
+                    <h1 class="font-serif-tc font-bold text-ink leading-[1.1] tracking-tight" style="font-size: clamp(2.25rem, 5vw, 4.5rem);">
+                        TOPS 台北好購
+                    </h1>
+                    <p class="mt-4 text-2xl md:text-3xl text-terracotta font-serif-tc">全台首創 B2B 採購媒合平台與獎勵機制</p>
+                    <p class="mt-8 text-base md:text-lg text-muted leading-[1.85] max-w-3xl">全台首創 B2B 採購媒合平台，半年內創造 3.48 億實質採購產值。導入「採購獎勵」與「永續共榮」機制，將政策行銷轉化為可持續的經濟動能。</p>
+                </div>
             </div>
 
-            <img src="images/tops.jpg" alt="TOPS 案例" class="w-full h-[400px] object-cover rounded-3xl shadow-xl mb-16">
+            <!-- Meta strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-0 md:gap-x-8 border-y border-ink py-6 md:py-8 text-sm">
+                <div>
+                    <div class="kicker mb-2">CLIENT</div>
+                    <p class="text-ink font-medium">臺北市政府產業發展局</p>
+                </div>
+                <div>
+                    <div class="kicker mb-2">YEAR</div>
+                    <p class="text-ink font-medium font-mono-en">2024–2025</p>
+                </div>
+                <div>
+                    <div class="kicker mb-2">CATEGORY</div>
+                    <p class="text-ink font-medium">B2B 媒合</p>
+                </div>
+                <div>
+                    <div class="kicker mb-2">SCOPE</div>
+                    <p class="text-ink font-medium leading-tight">平台營運、獎勵機制設計、ESG 整合</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-            <div class="space-y-12 text-lg leading-relaxed">
-                <section>
-                    <h2 class="text-2xl font-bold text-navy mb-4 border-l-4 border-vibrantOrange pl-4">【挑戰：打破新創與大企業間的採購牆】</h2>
-                    <p class="text-gray-600">如何讓新創企業的創新方案，真正進入大型金融與標竿企業的採購清單？Scope PR 協助台北市政府產業發展局執行「TOPS 台北好購」平台，挑戰在於不僅要推廣一個數位平台，更要建立一套讓大企業願意持續「回購」的機制，將政策轉化為實質經濟動能。</p>
-                </section>
+    <!-- HERO IMAGE -->
+    <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+        <div class="aspect-[16/8] bg-ink/5 overflow-hidden mb-16 md:mb-24">
+            <img src="images/tops.jpg" alt="TOPS 台北好購案例" class="w-full h-full object-cover">
+        </div>
+    </div>
 
-                <section>
-                    <h2 class="text-2xl font-bold text-navy mb-4 border-l-4 border-vibrantOrange pl-4">【策略：數位媒合 x 獎勵機制 x 典範行銷】</h2>
-                    <p class="text-gray-600">Scope PR 導入「數據驅動」與「永續治理」的思維，優化專案影響力：</p>
-                    <ul class="list-disc ml-6 mt-4 space-y-2 text-gray-600">
-                        <li><strong>建構「採購獎勵」溝通邏輯</strong>：協助梳理「採購貢獻獎」與「回購獎勵金」機制，透過實質誘因導流大企業採購方（如：玉山金控、中信銀、富邦人壽）持續支持在地新創。</li>
-                        <li><strong>串聯 ESG 與永續價值</strong>：特別設置「永續共榮獎」，將傳統採購提升至「企業社會責任」與「SDGs 實踐」的戰略高度。</li>
-                        <li><strong>高規格盛典與精準論述</strong>：統籌頒獎典禮暨啟動記者會，將 3.48 億元的採購成果轉化為具備「新聞爆發力」的數據指標。</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-navy mb-4 border-l-4 border-vibrantOrange pl-4">【結果：半年創造 3.48 億實質經濟產值】</h2>
-                    <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-                        <ul class="space-y-4 text-gray-600">
-                            <li>• <strong>數據說話</strong>：啟動不到半年，累計採購金額突破新台幣 3 億 4,800 餘萬元。</li>
-                            <li>• <strong>平台規模</strong>：成功吸引超過 870 家採購方與 527 家供應方加入。</li>
-                            <li>• <strong>定義標竿</strong>：讓「支持新創」成為台北企業的共同 DNA，展現 Scope PR 在 B2B 領域的戰略諮詢能力。</li>
-                        </ul>
+    <!-- CONTENT SECTIONS -->
+    <main class="pb-24 md:pb-32">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <section class="py-12 md:py-16 border-t border-line">
+                <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+                    <div class="md:col-span-3">
+                        <div class="kicker-num mb-3">01 / Challenge</div>
+                        <div class="kicker">挑戰</div>
                     </div>
-                </section>
-            </div>
+                    <div class="md:col-span-9 reveal">
+                        <h2 class="font-serif-tc font-bold text-ink leading-[1.2] tracking-tight" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
+                            打破新創與大企業間的採購牆<span class="text-terracotta">.</span>
+                        </h2>
+                        <p class="mt-6 text-base md:text-lg text-muted leading-[1.95] max-w-3xl">如何讓新創企業的創新方案，真正進入大型金融與標竿企業的採購清單？Scope PR 協助台北市政府產業發展局執行「TOPS 台北好購」平台，挑戰在於不僅要推廣一個數位平台，更要建立一套讓大企業願意持續「回購」的機制，將政策轉化為實質經濟動能。</p>
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="py-12 md:py-16 border-t border-line">
+                <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+                    <div class="md:col-span-3">
+                        <div class="kicker-num mb-3">02 / Strategy</div>
+                        <div class="kicker">策略</div>
+                    </div>
+                    <div class="md:col-span-9 reveal">
+                        <h2 class="font-serif-tc font-bold text-ink leading-[1.2] tracking-tight" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
+                            數位媒合 × 獎勵機制 × 典範行銷<span class="text-terracotta">.</span>
+                        </h2>
+                        <p class="mt-6 text-base md:text-lg text-muted leading-[1.95] max-w-3xl">Scope PR 導入「數據驅動」與「永續治理」的思維，優化專案影響力：</p>
+                        <ul class="mt-10 space-y-6">
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">建構「採購獎勵」溝通邏輯</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">協助梳理「採購貢獻獎」與「回購獎勵金」機制，透過實質誘因導流大企業採購方（如：玉山金控、中信銀、富邦人壽）持續支持在地新創。</p>
+                    </div>
+                </li>
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">串聯 ESG 與永續價值</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">特別設置「永續共榮獎」，將傳統採購提升至「企業社會責任」與「SDGs 實踐」的戰略高度。</p>
+                    </div>
+                </li>
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">高規格盛典與精準論述</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">統籌頒獎典禮暨啟動記者會，將 3.48 億元的採購成果轉化為具備「新聞爆發力」的數據指標。</p>
+                    </div>
+                </li>
+            </ul>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
 
-    <footer class="bg-navy text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm opacity-60">&copy; 2026 思構益公關顧問有限公司 Scope PR Consulting Co., Ltd. All Rights Reserved.</p>
+    <!-- RESULT BLOCK -->
+    <section class="bg-ink text-cream py-20 md:py-28">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="grid md:grid-cols-12 gap-8 md:gap-16">
+                <div class="md:col-span-4">
+                    <div class="kicker !text-terracotta mb-4">— Outcome / 成果</div>
+                    <h2 class="font-serif-tc font-bold text-cream leading-[1.15] tracking-tight" style="font-size: clamp(1.75rem, 3.5vw, 2.75rem);">
+                        半年創造 3.48 億實質經濟產值<span class="text-terracotta">.</span>
+                    </h2>
+                </div>
+                <div class="md:col-span-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-cream/15 mb-12">
+                        <div class="border border-cream/15 p-8">
+                            <div class="display-number text-5xl md:text-6xl text-cream">3.48<span class="text-terracotta">億</span></div>
+                            <div class="kicker !text-cream/50 mt-3">半年累計採購額</div>
+                        </div>
+                        <div class="border border-cream/15 p-8">
+                            <div class="display-number text-5xl md:text-6xl text-cream">870+<span class="text-terracotta"></span></div>
+                            <div class="kicker !text-cream/50 mt-3">採購方家數</div>
+                        </div>
+                        <div class="border border-cream/15 p-8">
+                            <div class="display-number text-5xl md:text-6xl text-cream">527+<span class="text-terracotta"></span></div>
+                            <div class="kicker !text-cream/50 mt-3">供應方家數</div>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-6">
+                        <li class="border-t border-cream/15 pt-6 grid md:grid-cols-12 gap-4">
+                            <div class="md:col-span-4">
+                                <div class="font-serif-tc font-bold text-cream text-lg">數據說話</div>
+                            </div>
+                            <div class="md:col-span-8">
+                                <p class="text-cream/65 leading-[1.9]">啟動不到半年，累計採購金額突破新台幣 3 億 4,800 餘萬元。</p>
+                            </div>
+                        </li>
+                        <li class="border-t border-cream/15 pt-6 grid md:grid-cols-12 gap-4">
+                            <div class="md:col-span-4">
+                                <div class="font-serif-tc font-bold text-cream text-lg">平台規模</div>
+                            </div>
+                            <div class="md:col-span-8">
+                                <p class="text-cream/65 leading-[1.9]">成功吸引超過 870 家採購方與 527 家供應方加入。</p>
+                            </div>
+                        </li>
+                        <li class="border-t border-cream/15 pt-6 grid md:grid-cols-12 gap-4">
+                            <div class="md:col-span-4">
+                                <div class="font-serif-tc font-bold text-cream text-lg">定義標竿</div>
+                            </div>
+                            <div class="md:col-span-8">
+                                <p class="text-cream/65 leading-[1.9]">讓「支持新創」成為台北企業的共同 DNA，展現 Scope PR 在 B2B 領域的戰略諮詢能力。</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TAGS -->
+    <section class="py-12 md:py-16 border-b border-line">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="kicker mb-6">— Tags</div>
+            <div class="flex flex-wrap gap-3">
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#B2B生態系</span>
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#政策行銷</span>
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#ESG永續採購</span>
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#新創三箭</span>
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#數位媒合</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEXT/PREV NAV -->
+    <section class="py-16 md:py-20">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-px md:bg-line md:border md:border-line">
+                <a href="case-cheerrun.html" class="group block bg-cream p-8 md:p-10 hover:bg-cream2/60 transition-colors">
+                    <div class="kicker mb-4">← Previous</div>
+                    <div class="display-number text-3xl text-terracotta mb-3">02</div>
+                    <h4 class="font-serif-tc font-bold text-xl md:text-2xl text-ink group-hover:text-terracotta transition-colors">CheeRRun 地方創生啦啦隊</h4>
+                    <p class="mt-2 text-muted text-sm">花蓮震後振興應援計畫</p>
+                </a>
+                <a href="case-stars.html" class="group block bg-cream p-8 md:p-10 hover:bg-cream2/60 transition-colors text-right">
+                    <div class="kicker mb-4">Next →</div>
+                    <div class="display-number text-3xl text-terracotta mb-3">04</div>
+                    <h4 class="font-serif-tc font-bold text-xl md:text-2xl text-ink group-hover:text-terracotta transition-colors">星空山城小鎮聯合行銷</h4>
+                    <p class="mt-2 text-muted text-sm">從地方創生到「暗空經濟」數位轉型</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-32 border-t border-line">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8 text-center">
+            <div class="kicker mb-6">— Let's Work Together</div>
+            <h2 class="font-serif-tc font-bold text-ink leading-[1.15] tracking-tight max-w-3xl mx-auto" style="font-size: clamp(2rem, 4vw, 3.5rem);">
+                想討論你的下一個 Scope<span class="text-terracotta">?</span>
+            </h2>
+            <p class="mt-8 text-muted leading-[1.85] max-w-xl mx-auto">
+                30 分鐘免費策略諮詢，由我們協助你定義精準的傳播範圍與商業目標。
+            </p>
+            <a href="index.html#contact" class="mt-10 inline-flex items-center gap-3 bg-ink text-cream px-10 py-5 hover:bg-terracotta transition-colors text-sm font-medium tracking-wider uppercase">
+                預約策略諮詢 →
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-cream text-ink py-16 md:py-20 border-t border-line">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="font-serif-tc font-black text-ink leading-none mb-12 md:mb-16" style="font-size: clamp(3rem, 12vw, 10rem); letter-spacing: -0.04em;">
+                Scope<span class="text-terracotta">.</span>
+            </div>
+            <div class="grid md:grid-cols-12 gap-8 md:gap-12 pb-12 border-b border-line">
+                <div class="md:col-span-4">
+                    <div class="font-serif-tc font-bold text-ink mb-3">思構益公關顧問有限公司</div>
+                    <p class="text-muted text-sm leading-[1.85]">
+                        思維構建價值，視野創造效益。結合資深專業與新創敏捷，為品牌定義精準的影響力。
+                    </p>
+                </div>
+                <div class="md:col-span-2 md:col-start-6">
+                    <div class="kicker mb-4">SITEMAP</div>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#about" class="text-ink hover:text-terracotta transition">關於我們</a></li>
+                        <li><a href="index.html#services" class="text-ink hover:text-terracotta transition">專業服務</a></li>
+                        <li><a href="index.html#process" class="text-ink hover:text-terracotta transition">服務流程</a></li>
+                        <li><a href="index.html#portfolio" class="text-ink hover:text-terracotta transition">標竿實績</a></li>
+                        <li><a href="index.html#faq" class="text-ink hover:text-terracotta transition">常見問題</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-3">
+                    <div class="kicker mb-4">CONTACT</div>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="mailto:contact@scopepr.com.tw" class="text-ink hover:text-terracotta transition font-mono-en">contact@scopepr.com.tw</a></li>
+                        <li class="text-muted">Taipei, Taiwan</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2 md:col-start-11">
+                    <div class="kicker mb-4">SOCIAL</div>
+                    <a href="https://www.facebook.com/profile.php?id=61588461683733" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-ink hover:text-terracotta transition text-sm">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mt-10 text-xs text-muted2">
+                <p>&copy; 2026 思構益公關顧問有限公司 Scope PR Consulting Co., Ltd. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="privacy.html" class="hover:text-ink transition">隱私權政策</a>
+                    <span class="font-mono-en">Designed with care · Taipei</span>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn?.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.classList.add('menu-open'); });
+        closeMenuBtn?.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.classList.remove('menu-open'); });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>

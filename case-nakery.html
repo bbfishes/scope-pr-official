@@ -3,95 +3,512 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>家樂福 Nakery 裸焙坊品牌系列行銷 | 思構益公關案例</title>
+    <title>家樂福 Nakery 裸焙坊 | 思構益公關案例</title>
     <meta name="description" content="Scope PR 協助家樂福自有烘焙品牌 Nakery 裸焙坊完成從開幕、校園巡迴到名人美食合作的全方位品牌行銷，涵蓋記者會、KOL合作、新品上市等整合傳播專案。">
     <meta name="keywords" content="家樂福,Nakery,裸焙坊,品牌行銷,記者會,校園行銷,KOL,美食作家,新品上市,Scope PR案例">
+    <meta property="og:title" content="家樂福 Nakery 裸焙坊 — 思構益公關 Scope PR">
+    <meta property="og:description" content="Scope PR 協助家樂福自有烘焙品牌 Nakery 裸焙坊完成從開幕、校園巡迴到名人美食合作的全方位品牌行銷，涵蓋記者會、KOL合作、新品上市等整合傳播專案。">
+    <meta property="og:type" content="article">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: '#003366',
-                        vibrantOrange: '#FF6600',
+                        ink: '#0A0A0A',
+                        ink2: '#1F1F1F',
+                        muted: '#5A5A5A',
+                        muted2: '#8A8A8A',
+                        cream: '#FAFAF7',
+                        cream2: '#F2EFE8',
+                        line: '#E8E5DD',
+                        terracotta: '#C5552D',
+                        terracotta2: '#A8431F',
+                        midnight: '#0F1419',
                     },
                     fontFamily: {
-                        sans: ['Noto Sans TC', 'sans-serif'],
-                    }
+                        sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
+                        serif: ['Noto Serif TC', 'serif'],
+                        mono: ['Inter', 'sans-serif'],
+                    },
                 }
             }
         }
     </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: #FAFAF7;
+            color: #0A0A0A;
+            font-feature-settings: "palt";
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-serif-tc { font-family: 'Noto Serif TC', serif; }
+        .font-mono-en { font-family: 'Inter', sans-serif; font-feature-settings: "ss01", "cv11"; }
+        .kicker {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #5A5A5A;
+        }
+        .kicker-num {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: #C5552D;
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -4px;
+            width: 0; height: 1px;
+            background-color: #0A0A0A;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .display-number {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-feature-settings: "tnum";
+            letter-spacing: -0.04em;
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+        }
+        .mobile-menu.open { transform: translateX(0); }
+        body.menu-open { overflow: hidden; }
+        ::selection { background: #C5552D; color: #FAFAF7; }
+        .prose-rich p { line-height: 1.95; color: #5A5A5A; }
+    </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center">
-                <img src="images/logo.jpg" alt="Scope PR Logo" class="h-10 w-auto mr-3 mix-blend-multiply">
-                <span class="text-xl font-bold text-navy">思構益公關顧問有限公司</span>
-            </a>
-            <a href="index.html#portfolio" class="text-navy font-bold hover:text-vibrantOrange transition">← 返回案例列表</a>
+<body class="font-sans bg-cream text-ink">
+
+    <!-- TOP BAR -->
+    <div class="hidden md:block bg-ink text-cream/70 text-xs">
+        <div class="max-w-[1400px] mx-auto px-8 py-2 flex justify-between items-center font-mono-en">
+            <span>EST. 2025 · TAIPEI</span>
+            <div class="flex items-center gap-6">
+                <a href="mailto:contact@scopepr.com.tw" class="hover:text-cream transition">contact@scopepr.com.tw</a>
+                <span class="opacity-40">|</span>
+                <a href="index.html#contact" class="hover:text-cream transition">預約策略諮詢 →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="sticky top-0 w-full bg-cream/85 backdrop-blur-md z-40 border-b border-line">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/logo.jpg" alt="Scope PR" class="h-10 w-10 rounded object-cover">
+                    <div class="leading-tight">
+                        <div class="font-serif-tc font-bold text-ink text-lg md:text-xl tracking-tight">思構益公關</div>
+                        <div class="font-mono-en text-[10px] text-muted2 tracking-[0.15em] uppercase">Scope PR Consulting</div>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-10">
+                    <a href="index.html#about" class="nav-link text-sm font-medium text-ink2">關於我們</a>
+                    <a href="index.html#services" class="nav-link text-sm font-medium text-ink2">專業服務</a>
+                    <a href="index.html#process" class="nav-link text-sm font-medium text-ink2">服務流程</a>
+                    <a href="index.html#portfolio" class="nav-link text-sm font-medium text-ink2">標竿實績</a>
+                    <a href="index.html#faq" class="nav-link text-sm font-medium text-ink2">常見問題</a>
+                    <a href="index.html#contact" class="bg-ink text-cream px-6 py-3 text-sm font-medium hover:bg-terracotta transition-colors">
+                        預約策略諮詢
+                    </a>
+                </div>
+                <button id="menuBtn" aria-label="menu" class="lg:hidden flex flex-col gap-1.5 p-2 -mr-2">
+                    <span class="block w-6 h-px bg-ink"></span>
+                    <span class="block w-6 h-px bg-ink"></span>
+                    <span class="block w-4 h-px bg-ink ml-auto"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <main class="py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <span class="bg-vibrantOrange text-white text-sm font-bold px-4 py-1 rounded-full mb-4 inline-block">品牌溝通</span>
-                <h1 class="text-3xl md:text-5xl font-bold text-navy mb-6">家樂福 Nakery 裸焙坊 —— 從門市開幕到美食名人合作的全方位品牌行銷</h1>
-                <p class="text-gray-500 text-lg">標籤：#品牌溝通 #記者會 #校園行銷 #名人合作 #新品上市 #KOL行銷</p>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-cream lg:hidden flex flex-col">
+        <div class="flex justify-between items-center h-20 px-6 border-b border-line">
+            <span class="font-serif-tc font-bold text-lg">思構益公關</span>
+            <button id="closeMenuBtn" aria-label="close" class="p-2 -mr-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <nav class="flex-1 flex flex-col px-6 py-10 gap-1 overflow-y-auto">
+            <a href="index.html#about" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">01</span><span class="font-serif-tc text-2xl">關於我們</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#services" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">02</span><span class="font-serif-tc text-2xl">專業服務</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#process" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">03</span><span class="font-serif-tc text-2xl">服務流程</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#portfolio" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">04</span><span class="font-serif-tc text-2xl">標竿實績</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#faq" class="flex items-baseline justify-between py-5 border-b border-line">
+                <div class="flex items-baseline gap-4"><span class="kicker-num">05</span><span class="font-serif-tc text-2xl">常見問題</span></div><span class="text-muted">→</span>
+            </a>
+            <a href="index.html#contact" class="mt-8 bg-ink text-cream py-5 text-center font-serif-tc text-xl">預約策略諮詢 →</a>
+        </nav>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="max-w-[1400px] mx-auto px-6 md:px-8 pt-8 md:pt-12">
+        <div class="flex items-center gap-3 font-mono-en text-xs">
+            <a href="index.html" class="text-muted2 hover:text-ink transition">HOME</a>
+            <span class="text-muted2">/</span>
+            <a href="index.html#portfolio" class="text-muted2 hover:text-ink transition">CASE STUDIES</a>
+            <span class="text-muted2">/</span>
+            <span class="text-ink">05</span>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="pt-12 md:pt-20 pb-16 md:pb-24">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="grid md:grid-cols-12 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="display-number text-5xl md:text-6xl text-terracotta">05</div>
+                </div>
+                <div class="md:col-span-8 reveal">
+                    <div class="kicker mb-6">— Case Study · Brand Communications</div>
+                    <h1 class="font-serif-tc font-bold text-ink leading-[1.1] tracking-tight" style="font-size: clamp(2.25rem, 5vw, 4.5rem);">
+                        家樂福 Nakery 裸焙坊
+                    </h1>
+                    <p class="mt-4 text-2xl md:text-3xl text-terracotta font-serif-tc">從門市開幕到美食名人合作的全方位品牌行銷</p>
+                    <p class="mt-8 text-base md:text-lg text-muted leading-[1.85] max-w-3xl">為家樂福自有烘焙品牌建立「健康、專業、有溫度」的市場定位。橫跨 2022–2024 年的長期合作，從上市記者會、校園巡迴到名人破圈，逐步累積品牌資產。</p>
+                </div>
             </div>
 
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80" alt="Nakery 裸焙坊案例" class="w-full h-[400px] object-cover rounded-3xl shadow-xl mb-16">
+            <!-- Meta strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-0 md:gap-x-8 border-y border-ink py-6 md:py-8 text-sm">
+                <div>
+                    <div class="kicker mb-2">CLIENT</div>
+                    <p class="text-ink font-medium">家樂福 Carrefour Nakery 裸焙坊</p>
+                </div>
+                <div>
+                    <div class="kicker mb-2">YEAR</div>
+                    <p class="text-ink font-medium font-mono-en">2022–2024</p>
+                </div>
+                <div>
+                    <div class="kicker mb-2">CATEGORY</div>
+                    <p class="text-ink font-medium">品牌溝通</p>
+                </div>
+                <div>
+                    <div class="kicker mb-2">SCOPE</div>
+                    <p class="text-ink font-medium leading-tight">品牌上市、校園巡迴、名人合作</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-            <div class="space-y-12 text-lg leading-relaxed">
-                <section>
-                    <h2 class="text-2xl font-bold text-navy mb-4 border-l-4 border-vibrantOrange pl-4">【背景：為家樂福自有烘焙品牌打造市場定位】</h2>
-                    <p class="text-gray-600">家樂福推出自有烘焙品牌 Nakery 裸焙坊，以「低糖、無添加」為核心訴求，瞄準注重健康的消費者市場。Scope PR 受邀擔任品牌上市與後續系列活動的公關顧問，挑戰在於：如何讓自有烘焙品牌在競爭激烈的烘焙市場中建立清晰定位，並透過系列活動累積品牌資產。</p>
-                </section>
+    <!-- HERO IMAGE -->
+    <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+        <div class="aspect-[16/8] bg-ink/5 overflow-hidden mb-16 md:mb-24">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80" alt="Nakery 裸焙坊案例" class="w-full h-full object-cover">
+        </div>
+    </div>
 
-                <section>
-                    <h2 class="text-2xl font-bold text-navy mb-4 border-l-4 border-vibrantOrange pl-4">【策略：分階段品牌建設，整合線上線下資源】</h2>
-                    <p class="text-gray-600">Scope PR 以「階段性品牌建設」為核心策略，為 Nakery 打造從上市到深化價值的完整行銷路徑：</p>
-                    <ul class="list-disc ml-6 mt-4 space-y-2 text-gray-600">
-                        <li><strong>品牌上市記者會</strong>：2022 年西屯店開幕時，統籌「開幕暨低糖麵包分享會」記者會，邀請營養師李婉萍專業職人站台，透過新聞稿與媒體邀約建立首波聲量。</li>
-                        <li><strong>校園巡迴深化認知</strong>：2023 年執行「Nakery 無添加 2.0 校園巡迴行銷」，深入校園傳遞健康烘焙理念，培養年輕世代的品牌認知。</li>
-                        <li><strong>名人美食家合作破圈</strong>：2024 年推出「作家買菜」系列，攜手馬世芳、詹宏志、楊馥如、王嘉平等四位知名美食作家，於家樂福門市舉辦職人分享會，將品牌理念與名人影響力結合，吸引高端消費族群。</li>
-                        <li><strong>節令新品持續發聲</strong>：配合節令推出青森紅玉蘋果派、鳳梨酥等新品上市記者會，維持品牌話題熱度並擴展產品線聲量。</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-navy mb-4 border-l-4 border-vibrantOrange pl-4">【執行亮點：專業職人與跨界名人雙軌並進】</h2>
-                    <p class="text-gray-600">本系列專案橫跨 2022 至 2024 年，Scope PR 以「專業職人 + 跨界名人」雙軌策略，為 Nakery 建立起「健康、專業、有溫度」的品牌形象：</p>
-                    <ul class="list-disc ml-6 mt-4 space-y-2 text-gray-600">
-                        <li>攜手日本甜點大師小山進，借勢國際職人背書強化產品專業形象。</li>
-                        <li>邀請營養師李婉萍等專業職人，以科學數據支持「低糖、無添加」產品定位。</li>
-                        <li>透過內容企劃與敘事策略，將產品置入生活場景，提升消費者認同感。</li>
-                        <li>搭配校園巡迴、KOL 分享會等多元形式，覆蓋不同年齡層與消費族群。</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-navy mb-4 border-l-4 border-vibrantOrange pl-4">【成果：多年合作，建立品牌堅實基礎】</h2>
-                    <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-                        <ul class="space-y-4 text-gray-600">
-                            <li>• <strong>品牌聲量持續累積</strong>：透過多場記者會與名人活動，協助 Nakery 建立穩定的媒體曝光與社群討論度。</li>
-                            <li>• <strong>多元族群覆蓋</strong>：從校園年輕族群到高端美食愛好者，成功拓展不同消費市場的品牌認知。</li>
-                            <li>• <strong>品項延伸能力</strong>：從低糖麵包到蘋果派、鳳梨酥等節令新品，展現 Scope PR 協助品牌持續擴展產品線的行銷執行力。</li>
-                            <li>• <strong>長期夥伴關係</strong>：多年服務期間，持續獲得家樂福信任，驗證 Scope PR 在食品零售行銷領域的專業深度。</li>
-                        </ul>
+    <!-- CONTENT SECTIONS -->
+    <main class="pb-24 md:pb-32">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <section class="py-12 md:py-16 border-t border-line">
+                <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+                    <div class="md:col-span-3">
+                        <div class="kicker-num mb-3">01 / Background</div>
+                        <div class="kicker">背景</div>
                     </div>
-                </section>
-            </div>
+                    <div class="md:col-span-9 reveal">
+                        <h2 class="font-serif-tc font-bold text-ink leading-[1.2] tracking-tight" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
+                            為家樂福自有烘焙品牌打造市場定位<span class="text-terracotta">.</span>
+                        </h2>
+                        <p class="mt-6 text-base md:text-lg text-muted leading-[1.95] max-w-3xl">家樂福推出自有烘焙品牌 Nakery 裸焙坊，以「低糖、無添加」為核心訴求，瞄準注重健康的消費者市場。Scope PR 受邀擔任品牌上市與後續系列活動的公關顧問，挑戰在於：如何讓自有烘焙品牌在競爭激烈的烘焙市場中建立清晰定位，並透過系列活動累積品牌資產。</p>
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="py-12 md:py-16 border-t border-line">
+                <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+                    <div class="md:col-span-3">
+                        <div class="kicker-num mb-3">02 / Strategy</div>
+                        <div class="kicker">策略</div>
+                    </div>
+                    <div class="md:col-span-9 reveal">
+                        <h2 class="font-serif-tc font-bold text-ink leading-[1.2] tracking-tight" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
+                            分階段品牌建設，整合線上線下資源<span class="text-terracotta">.</span>
+                        </h2>
+                        <p class="mt-6 text-base md:text-lg text-muted leading-[1.95] max-w-3xl">Scope PR 以「階段性品牌建設」為核心策略，為 Nakery 打造從上市到深化價值的完整行銷路徑：</p>
+                        <ul class="mt-10 space-y-6">
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">品牌上市記者會</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">2022 年西屯店開幕時，統籌「開幕暨低糖麵包分享會」記者會，邀請營養師李婉萍專業職人站台，透過新聞稿與媒體邀約建立首波聲量。</p>
+                    </div>
+                </li>
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">校園巡迴深化認知</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">2023 年執行「Nakery 無添加 2.0 校園巡迴行銷」，深入校園傳遞健康烘焙理念，培養年輕世代的品牌認知。</p>
+                    </div>
+                </li>
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">名人美食家合作破圈</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">2024 年推出「作家買菜」系列，攜手馬世芳、詹宏志、楊馥如、王嘉平等四位知名美食作家，於家樂福門市舉辦職人分享會，將品牌理念與名人影響力結合，吸引高端消費族群。</p>
+                    </div>
+                </li>
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">節令新品持續發聲</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">配合節令推出青森紅玉蘋果派、鳳梨酥等新品上市記者會，維持品牌話題熱度並擴展產品線聲量。</p>
+                    </div>
+                </li>
+            </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="py-12 md:py-16 border-t border-line">
+                <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+                    <div class="md:col-span-3">
+                        <div class="kicker-num mb-3">03 / Execution</div>
+                        <div class="kicker">執行亮點</div>
+                    </div>
+                    <div class="md:col-span-9 reveal">
+                        <h2 class="font-serif-tc font-bold text-ink leading-[1.2] tracking-tight" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
+                            專業職人與跨界名人雙軌並進<span class="text-terracotta">.</span>
+                        </h2>
+                        <p class="mt-6 text-base md:text-lg text-muted leading-[1.95] max-w-3xl">本系列專案橫跨 2022 至 2024 年，Scope PR 以「專業職人 + 跨界名人」雙軌策略，為 Nakery 建立起「健康、專業、有溫度」的品牌形象：</p>
+                        <ul class="mt-10 space-y-6">
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">國際職人背書</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">攜手日本甜點大師小山進，借勢國際職人背書強化產品專業形象。</p>
+                    </div>
+                </li>
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">專業職人站台</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">邀請營養師李婉萍等專業職人，以科學數據支持「低糖、無添加」產品定位。</p>
+                    </div>
+                </li>
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">敘事策略</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">透過內容企劃與敘事策略，將產品置入生活場景，提升消費者認同感。</p>
+                    </div>
+                </li>
+                <li class="border-t border-line pt-6 grid md:grid-cols-12 gap-4">
+                    <div class="md:col-span-3">
+                        <div class="font-serif-tc font-bold text-ink text-lg leading-snug">多元觸點</div>
+                    </div>
+                    <div class="md:col-span-9">
+                        <p class="text-muted leading-[1.9]">搭配校園巡迴、KOL 分享會等多元形式，覆蓋不同年齡層與消費族群。</p>
+                    </div>
+                </li>
+            </ul>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
 
-    <footer class="bg-navy text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm opacity-60">&copy; 2026 思構益公關顧問有限公司 Scope PR Consulting Co., Ltd. All Rights Reserved.</p>
+    <!-- RESULT BLOCK -->
+    <section class="bg-ink text-cream py-20 md:py-28">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="grid md:grid-cols-12 gap-8 md:gap-16">
+                <div class="md:col-span-4">
+                    <div class="kicker !text-terracotta mb-4">— Outcome / 成果</div>
+                    <h2 class="font-serif-tc font-bold text-cream leading-[1.15] tracking-tight" style="font-size: clamp(1.75rem, 3.5vw, 2.75rem);">
+                        多年合作，建立品牌堅實基礎<span class="text-terracotta">.</span>
+                    </h2>
+                </div>
+                <div class="md:col-span-8">
+
+                    <ul class="space-y-6">
+                        <li class="border-t border-cream/15 pt-6 grid md:grid-cols-12 gap-4">
+                            <div class="md:col-span-4">
+                                <div class="font-serif-tc font-bold text-cream text-lg">品牌聲量持續累積</div>
+                            </div>
+                            <div class="md:col-span-8">
+                                <p class="text-cream/65 leading-[1.9]">透過多場記者會與名人活動，協助 Nakery 建立穩定的媒體曝光與社群討論度。</p>
+                            </div>
+                        </li>
+                        <li class="border-t border-cream/15 pt-6 grid md:grid-cols-12 gap-4">
+                            <div class="md:col-span-4">
+                                <div class="font-serif-tc font-bold text-cream text-lg">多元族群覆蓋</div>
+                            </div>
+                            <div class="md:col-span-8">
+                                <p class="text-cream/65 leading-[1.9]">從校園年輕族群到高端美食愛好者，成功拓展不同消費市場的品牌認知。</p>
+                            </div>
+                        </li>
+                        <li class="border-t border-cream/15 pt-6 grid md:grid-cols-12 gap-4">
+                            <div class="md:col-span-4">
+                                <div class="font-serif-tc font-bold text-cream text-lg">品項延伸能力</div>
+                            </div>
+                            <div class="md:col-span-8">
+                                <p class="text-cream/65 leading-[1.9]">從低糖麵包到蘋果派、鳳梨酥等節令新品，展現 Scope PR 協助品牌持續擴展產品線的行銷執行力。</p>
+                            </div>
+                        </li>
+                        <li class="border-t border-cream/15 pt-6 grid md:grid-cols-12 gap-4">
+                            <div class="md:col-span-4">
+                                <div class="font-serif-tc font-bold text-cream text-lg">長期夥伴關係</div>
+                            </div>
+                            <div class="md:col-span-8">
+                                <p class="text-cream/65 leading-[1.9]">多年服務期間，持續獲得家樂福信任，驗證 Scope PR 在食品零售行銷領域的專業深度。</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TAGS -->
+    <section class="py-12 md:py-16 border-b border-line">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="kicker mb-6">— Tags</div>
+            <div class="flex flex-wrap gap-3">
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#品牌溝通</span>
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#記者會</span>
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#校園行銷</span>
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#名人合作</span>
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#新品上市</span>
+                <span class="border border-line px-4 py-2 text-sm text-muted2 hover:border-terracotta hover:text-terracotta transition cursor-default">#KOL行銷</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEXT/PREV NAV -->
+    <section class="py-16 md:py-20">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-px md:bg-line md:border md:border-line">
+                <a href="case-stars.html" class="group block bg-cream p-8 md:p-10 hover:bg-cream2/60 transition-colors">
+                    <div class="kicker mb-4">← Previous</div>
+                    <div class="display-number text-3xl text-terracotta mb-3">04</div>
+                    <h4 class="font-serif-tc font-bold text-xl md:text-2xl text-ink group-hover:text-terracotta transition-colors">星空山城小鎮聯合行銷</h4>
+                    <p class="mt-2 text-muted text-sm">從地方創生到「暗空經濟」數位轉型</p>
+                </a>
+                <a href="case-challenger.html" class="group block bg-cream p-8 md:p-10 hover:bg-cream2/60 transition-colors text-right">
+                    <div class="kicker mb-4">Next →</div>
+                    <div class="display-number text-3xl text-terracotta mb-3">06</div>
+                    <h4 class="font-serif-tc font-bold text-xl md:text-2xl text-ink group-hover:text-terracotta transition-colors">挑戰者盃亞洲電競賽車錦標賽</h4>
+                    <p class="mt-2 text-muted text-sm">打造跨區賽事聲量</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-32 border-t border-line">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8 text-center">
+            <div class="kicker mb-6">— Let's Work Together</div>
+            <h2 class="font-serif-tc font-bold text-ink leading-[1.15] tracking-tight max-w-3xl mx-auto" style="font-size: clamp(2rem, 4vw, 3.5rem);">
+                想討論你的下一個 Scope<span class="text-terracotta">?</span>
+            </h2>
+            <p class="mt-8 text-muted leading-[1.85] max-w-xl mx-auto">
+                30 分鐘免費策略諮詢，由我們協助你定義精準的傳播範圍與商業目標。
+            </p>
+            <a href="index.html#contact" class="mt-10 inline-flex items-center gap-3 bg-ink text-cream px-10 py-5 hover:bg-terracotta transition-colors text-sm font-medium tracking-wider uppercase">
+                預約策略諮詢 →
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-cream text-ink py-16 md:py-20 border-t border-line">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-8">
+            <div class="font-serif-tc font-black text-ink leading-none mb-12 md:mb-16" style="font-size: clamp(3rem, 12vw, 10rem); letter-spacing: -0.04em;">
+                Scope<span class="text-terracotta">.</span>
+            </div>
+            <div class="grid md:grid-cols-12 gap-8 md:gap-12 pb-12 border-b border-line">
+                <div class="md:col-span-4">
+                    <div class="font-serif-tc font-bold text-ink mb-3">思構益公關顧問有限公司</div>
+                    <p class="text-muted text-sm leading-[1.85]">
+                        思維構建價值，視野創造效益。結合資深專業與新創敏捷，為品牌定義精準的影響力。
+                    </p>
+                </div>
+                <div class="md:col-span-2 md:col-start-6">
+                    <div class="kicker mb-4">SITEMAP</div>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#about" class="text-ink hover:text-terracotta transition">關於我們</a></li>
+                        <li><a href="index.html#services" class="text-ink hover:text-terracotta transition">專業服務</a></li>
+                        <li><a href="index.html#process" class="text-ink hover:text-terracotta transition">服務流程</a></li>
+                        <li><a href="index.html#portfolio" class="text-ink hover:text-terracotta transition">標竿實績</a></li>
+                        <li><a href="index.html#faq" class="text-ink hover:text-terracotta transition">常見問題</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-3">
+                    <div class="kicker mb-4">CONTACT</div>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="mailto:contact@scopepr.com.tw" class="text-ink hover:text-terracotta transition font-mono-en">contact@scopepr.com.tw</a></li>
+                        <li class="text-muted">Taipei, Taiwan</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2 md:col-start-11">
+                    <div class="kicker mb-4">SOCIAL</div>
+                    <a href="https://www.facebook.com/profile.php?id=61588461683733" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-ink hover:text-terracotta transition text-sm">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mt-10 text-xs text-muted2">
+                <p>&copy; 2026 思構益公關顧問有限公司 Scope PR Consulting Co., Ltd. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="privacy.html" class="hover:text-ink transition">隱私權政策</a>
+                    <span class="font-mono-en">Designed with care · Taipei</span>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn?.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.classList.add('menu-open'); });
+        closeMenuBtn?.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.classList.remove('menu-open'); });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
